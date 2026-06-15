@@ -4,13 +4,10 @@ def login():
     username = input("Enter your username: ")
     password = input("Enter your password: ")
     
-    if username in users:
-        if users[username] == password:
-            print("Login successful!")
-        else:
-            print("Incorrect password.")
+    if username in users and users[username] == password:
+        print("Login successful!")
     else:
-        print("Username not found.")
+        print("Incorrect Username or Password")
 
 # Example usage
 login()
